@@ -44,7 +44,7 @@ def catalog():
     for i,(title,slug,lead,groups) in enumerate(SERVICES,1):
         body=''.join(f'<h4>{escape(h)}</h4><p>{escape(p)}</p>' for h,p in groups)
         link=slug or 'epikoinonia.html#rantevou'
-        cards.append(f'<article class="analysis-card" id="analysi-{i}"><span class="num">{i:02}</span><h3>{escape(title)}</h3><p class="analysis-intro">{escape(lead)}</p>{body}<a class="textlink" href="{link}">Αναλυτικές πληροφορίες <span aria-hidden="true">→</span></a></article>')
+        cards.append(f'<article class="analysis-card" id="analysi-{i}"><span class="num">{i:02}</span><h3>{escape(title)}</h3><p class="analysis-intro">{escape(lead)}</p>{body}<a class="textlink" href="{link}">Αναλυτικές πληροφορίες</a></article>')
     return '''<section class="sec sec-off" id="analytikes-ypiresies"><div class="container">
 <div class="sec-head"><p class="eyebrow">Αναλυτικές υπηρεσίες</p><h2 class="h2">Οι εξετάσεις μας,<br>ανά κατηγορία.</h2><p class="lead">Δείτε τις διαθέσιμες αναλύσεις και τι περιλαμβάνει κάθε υπηρεσία.</p></div>
 <label class="analysis-search" for="analysis-search">Αναζήτηση εξέτασης<input type="search" id="analysis-search" placeholder="π.χ. HPV, BRCA, μικροβίωμα" autocomplete="off"></label>
