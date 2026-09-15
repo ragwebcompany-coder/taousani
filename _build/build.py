@@ -3,8 +3,9 @@
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import SITE, CATS
+from catalog import catalog, TEAM_PREVIEW
 
-OUT = "/Users/apostolospollalis/Downloads/wetransfer_biolab_2026-09-07_1222/biolab-site"
+OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 S = SITE
 
@@ -18,13 +19,7 @@ def pic(name, alt, cls="", sizes="100vw", loading="lazy", width=None, height=Non
             f'<img src="assets/images/{name}.jpg" alt="{alt}"{attrs}{dim}{ld}{fp}></picture>')
 
 
-LOGO = ('<svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">'
-        '<path d="M11 4c0 7 18 9 18 16S11 29 11 36" stroke="currentColor" stroke-width="2.1" '
-        'stroke-linecap="round" style="color:#0a2342"/>'
-        '<path d="M29 4c0 7-18 9-18 16s18 9 18 16" stroke="currentColor" stroke-width="2.1" '
-        'stroke-linecap="round" style="color:#2f7fbf"/>'
-        '<path d="M14 11h12M12.5 17h15M12.5 23h15M14 29h12" stroke="#2f7fbf" stroke-width="1.5" '
-        'stroke-linecap="round" opacity=".55"/></svg>')
+LOGO = '<img class="brand-logo" src="assets/images/biolab-logo.png" alt="BIOLAB — Μοριακή Διαγνωστική" width="220" height="69">'
 
 CARET = ('<svg class="caret" viewBox="0 0 12 12" fill="none" aria-hidden="true">'
          '<path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" '
@@ -115,7 +110,6 @@ def header(page):
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="BIOLAB — Αρχική">
       {LOGO}
-      <span class="brand-copy"><strong>BIOLAB</strong><span>Μικροβιολογικό &amp; Μοριακό Εργαστήριο</span></span>
     </a>
     <nav aria-label="Κύρια πλοήγηση">
       <ul class="nav-links">{''.join(items)}</ul>
@@ -132,7 +126,7 @@ def header(page):
 <div class="mobile-nav" id="mobile-nav">
   <div class="container">
     <div class="mobile-nav-head">
-      <span class="brand">{LOGO}<span class="brand-copy"><strong>BIOLAB</strong><span>Μικροβιολογικό &amp; Μοριακό Εργαστήριο</span></span></span>
+      <span class="brand">{LOGO}</span>
       <button class="mobile-close" type="button" aria-label="Κλείσιμο μενού">✕</button>
     </div>
     <ul class="mobile-list">{''.join(mob)}</ul>
@@ -176,7 +170,7 @@ def footer():
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="brand">{LOGO}<span class="brand-copy"><strong>BIOLAB</strong><span>Μικροβιολογικό &amp; Μοριακό Εργαστήριο</span></span></span>
+        <span class="brand">{LOGO}</span>
         <p>{S['legal']} — σύγχρονο εργαστήριο μοριακής διάγνωσης στις Σέρρες, με δέσμευση
         σε αξιόπιστα αποτελέσματα για ιδιώτες και επαγγελματίες υγείας.</p>
         <div class="footer-contact">
@@ -331,7 +325,7 @@ def build_index():
     με έμπειρο επιστημονικό προσωπικό, για αξιόπιστα αποτελέσματα που στηρίζουν
     πραγματικά την απόφαση του ιατρού και του ασθενούς.</p>
     <div class="hero-actions">
-      <a class="btn btn-light" href="exetaseis.html">Δείτε τις εξετάσεις{ARW}</a>
+      <a class="btn btn-light" href="exetaseis.html#analytikes-ypiresies">Δείτε τις εξετάσεις{ARW}</a>
       <a class="btn btn-outline-light" href="epikoinonia.html#rantevou">Κλείστε ραντεβού</a>
     </div>
     <dl class="hero-stats">
@@ -452,6 +446,7 @@ def build_index():
 </section>
 
 """
+        + TEAM_PREVIEW
         + cta_band()
         + footer())
 
@@ -490,6 +485,7 @@ def build_exetaseis():
   </div>
 </section>
 
+{catalog()}
 <section class="sec sec-tight sec-off">
   <div class="container container-narrow">
     <div class="sec-head center reveal" style="margin-bottom:34px">
@@ -707,7 +703,7 @@ def build_omada():
   <div class="container">
 
     <article class="person reveal">
-      <div class="person-media">{pic('scientist-blue', 'Μαρία Ταουσάνη, Μοριακή Βιολόγος')}</div>
+      <div class="person-media"><img src="assets/images/maria-taousani.png" alt="Μαρία Ταουσάνη, Μοριακή Βιολόγος" loading="lazy" decoding="async"></div>
       <div>
         <p class="person-role">Μοριακή Βιολόγος · Γενική Διευθύντρια</p>
         <h2>Ταουσάνη Μαρία</h2>
@@ -735,7 +731,7 @@ def build_omada():
     </article>
 
     <article class="person reveal">
-      <div class="person-media">{pic('portrait-work', 'Αικατερίνη Τζιούρα, Ιατρός Βιοπαθολόγος')}</div>
+      <div class="person-media"><img src="assets/images/aikaterini-tzioura.jpg" alt="Αικατερίνη Τζιούρα, Ιατρός Βιοπαθολόγος" loading="lazy" decoding="async"></div>
       <div>
         <p class="person-role">Ιατρός Βιοπαθολόγος</p>
         <h2>Τζιούρα Αικατερίνη</h2>
@@ -761,7 +757,7 @@ def build_omada():
     </article>
 
     <article class="person reveal">
-      <div class="person-media">{pic('team', 'Χρυσάνθη Μπούτσιου, Βοηθός Ιατρικών Εργαστηρίων')}</div>
+      <div class="person-media"><img src="assets/images/chrysanthi-mpoutsiou.png" alt="Χρυσάνθη Μπούτσιου, Βοηθός Ιατρικών Εργαστηρίων" loading="lazy" decoding="async"></div>
       <div>
         <p class="person-role">Βοηθός Ιατρικών Εργαστηρίων</p>
         <h2>Μπούτσιου Χρυσάνθη</h2>

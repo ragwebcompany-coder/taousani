@@ -127,3 +127,23 @@
     });
   }
 })();
+
+// Search the full service catalog, ignoring Greek accents and case.
+(() => {
+  const input = document.getElementById('analysis-search');
+  if (!input) return;
+  const cards = [...document.querySelectorAll('.analysis-card')];
+  const status = document.getElementById('analysis-status');
+  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('el').replace(/ς/g, 'σ');
+  const update = () => {
+    const terms = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+    let count = 0;
+    cards.forEach(card => {
+      card.hidden = !terms.every(term => normalize(card.textContent).includes(term));
+      if (!card.hidden) count++;
+    });
+    status.textContent = count ? `${count} από ${cards.length} κατηγορίες υπηρεσιών` : 'Δεν βρέθηκε εξέταση. Δοκιμάστε άλλη λέξη ή επικοινωνήστε μαζί μας.';
+  };
+  input.addEventListener('input', update);
+  update();
+})();
