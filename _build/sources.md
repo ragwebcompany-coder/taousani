@@ -1,13 +1,13 @@
 # Sources — 2026-09-15
 
 The correct legacy website is https://www.biolabs.gr/ (Maria Taousani, Serres).
-The requested biolab.com.gr belongs to a different laboratory.
+Logo source explicitly corrected by the user on 2026-09-16: https://www.biolab.com.gr/biolab-logo-color.jpg.
+The current logo is the green flask and leaf mark from that URL.
 
-- Logo and staff identity/photo mapping: https://www.biolabs.gr/i-omada-mas/
+- Staff identity/photo mapping: https://www.biolabs.gr/i-omada-mas/
   - Maria Taousani: /wp-content/uploads/2025/02/Image-1.png
   - Aikaterini Tzioura: /wp-content/uploads/2026/07/IMG_7714-768x1024.jpeg
   - Chrysanthi Mpoutsiou: /wp-content/uploads/2025/02/Image-2.png
-  - Logo: /wp-content/uploads/2023/08/logo-1.png
 - Service index: https://www.biolabs.gr/diagnostikes-eksetaseis/
 - Genetics: https://www.biolabs.gr/genetikos-elegxos-kai-genetika-nosimata/
 - Infertility: https://www.biolabs.gr/γενετικός-έλεγχος-υπογονιμότητας-κα/
