@@ -692,8 +692,8 @@ section { position: relative; }
 }
 
 /* Original BIOLAB identity and staff portraits. */
-.brand-logo { width: 100px; height: 90px; object-fit: cover; object-position: center 43%; display: block; }
-.footer-brand .brand-logo { width: 120px; height: 108px; background: #fff; border-radius: 8px; }
+.brand-logo { width: 98px; height: 90px; object-fit: contain; display: block; }
+.footer-brand .brand-logo { width: 120px; height: auto; }
 .person-media img { aspect-ratio: auto; height: auto; object-fit: contain; object-position: center top; background: #f1f4f7; }
 .analysis-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
 .analysis-card { padding:34px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; }
@@ -713,7 +713,7 @@ section { position: relative; }
 .team-preview-grid h3 { margin:18px 0 8px; font-size:21px; }
 .team-preview-grid p { color:var(--muted); }
 @media(max-width:700px) {
- .brand-logo { width:78px; height:70px; }
+ .brand-logo { width:78px; height:auto; }
  .analysis-grid,.team-preview-grid { grid-template-columns:1fr; }
  .analysis-card { padding:24px; }
  .analysis-card h3 { font-size:22px; }

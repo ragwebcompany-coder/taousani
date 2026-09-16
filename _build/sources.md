@@ -23,3 +23,7 @@ Routine microbiology/biochemistry comes from the existing project content.
 Andrology summarizes the legacy infertility and sperm microbiome services.
 Layout reference: https://lifeline-diagnostics-pi.vercel.app/services.html
 The reference's clinic-specific staff, tests and claims were not copied.
+
+## Final logo approved by user — 2026-09-16
+
+The user supplied the exact white BIOLAB flask/leaf logo on a dark navy background as a screenshot. It is copied unchanged to `assets/images/biolab-logo-approved.png` and used in all logo placements, with contain sizing to preserve the complete image. This supersedes the earlier green logo.

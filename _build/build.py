@@ -19,7 +19,7 @@ def pic(name, alt, cls="", sizes="100vw", loading="lazy", width=None, height=Non
             f'<img src="assets/images/{name}.jpg" alt="{alt}"{attrs}{dim}{ld}{fp}></picture>')
 
 
-LOGO = '<img class="brand-logo" src="assets/images/biolab-logo-color.jpg" alt="BIOLAB" width="100" height="90">'
+LOGO = '<img class="brand-logo" src="assets/images/biolab-logo-approved.png" alt="BIOLAB" width="272" height="250">'
 
 CARET = ('<svg class="caret" viewBox="0 0 12 12" fill="none" aria-hidden="true">'
          '<path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" '
