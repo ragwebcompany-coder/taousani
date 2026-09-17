@@ -740,3 +740,9 @@ section { position: relative; }
 .site-header .dropdown a:hover { background: rgba(255,255,255,.1); color: #a9dbfa; }
 .site-header .dropdown .num { color: #83c4ee; }
 .site-header a:focus-visible, .site-header button:focus-visible { outline: 2px solid #83c4ee; outline-offset: 4px; }
+
+/* User-provided horizontal DNA logo in the navigation. */
+.site-header .brand-logo-dna, .mobile-nav .brand-logo-dna { width: 170px; height: auto; }
+@media (max-width: 700px) {
+  .site-header .brand-logo-dna, .mobile-nav .brand-logo-dna { width: 140px; }
+}

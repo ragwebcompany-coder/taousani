@@ -19,6 +19,7 @@ def pic(name, alt, cls="", sizes="100vw", loading="lazy", width=None, height=Non
             f'<img src="assets/images/{name}.jpg" alt="{alt}"{attrs}{dim}{ld}{fp}></picture>')
 
 
+HEADER_LOGO = '<img class="brand-logo brand-logo-dna" src="assets/images/biolab-dna-logo.png" alt="BIOLAB" width="566" height="196">'
 LOGO = '<img class="brand-logo" src="assets/images/biolab-logo-approved.png" alt="BIOLAB" width="272" height="250">'
 
 CARET = ('<svg class="caret" viewBox="0 0 12 12" fill="none" aria-hidden="true">'
@@ -109,7 +110,7 @@ def header(page):
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="BIOLAB — Αρχική">
-      {LOGO}
+      {HEADER_LOGO}
     </a>
     <nav aria-label="Κύρια πλοήγηση">
       <ul class="nav-links">{''.join(items)}</ul>
@@ -126,7 +127,7 @@ def header(page):
 <div class="mobile-nav" id="mobile-nav">
   <div class="container">
     <div class="mobile-nav-head">
-      <span class="brand">{LOGO}</span>
+      <span class="brand">{HEADER_LOGO}</span>
       <button class="mobile-close" type="button" aria-label="Κλείσιμο μενού">✕</button>
     </div>
     <ul class="mobile-list">{''.join(mob)}</ul>
