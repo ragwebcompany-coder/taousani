@@ -191,7 +191,8 @@ def footer():
       <div class="footer-col">
         <h4>Ωράριο &amp; διεύθυνση</h4>
         <div class="hours">
-          <div><span>Δευτέρα – Παρασκευή</span><span>09:00 – 17:00</span></div>
+          <div><span>Δευτέρα – Παρασκευή</span><span>07:30 – 15:00</span></div>
+          <div><span>Απογευματινό ωράριο</span><span>18:00 – 20:00</span></div>
           <div><span>Σάββατο – Κυριακή</span><span>Κλειστά</span></div>
         </div>
         <ul style="margin-top:22px">
@@ -304,7 +305,7 @@ def build_index():
 "url":"https://www.biolabs.gr","telephone":"+30 23211 21602","email":"info@biolabs.gr",
 "image":"https://www.biolabs.gr/assets/images/og-image.jpg",
 "address":{"@type":"PostalAddress","streetAddress":"Τσαλοπούλου 15","addressLocality":"Σέρρες","postalCode":"62122","addressCountry":"GR"},
-"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"}],
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"18:00","closes":"20:00"}],
 "medicalSpecialty":["Pathology","Genetics"]}
 </script>
 """
@@ -935,7 +936,7 @@ def build_epikoinonia():
         <div class="info-row"><dt>Email</dt>
           <dd><a href="mailto:{S['email']}">{S['email']}</a></dd></div>
         <div class="info-row"><dt>Ωράριο</dt>
-          <dd>Δευτέρα – Παρασκευή 09:00 – 17:00
+          <dd>Δευτέρα – Παρασκευή 07:30 – 15:00 &amp; 18:00 – 20:00
           <span class="sub">Σάββατο &amp; Κυριακή κλειστά</span></dd></div>
         <div class="info-row"><dt>Κατ' οίκον</dt>
           <dd>Δειγματοληψία στον χώρο σας
